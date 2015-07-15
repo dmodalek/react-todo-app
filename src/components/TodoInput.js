@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react/addons');
+var Utils = require('../Utils');
 
 require('styles/TodoInput.scss');
 
@@ -10,15 +11,18 @@ var TodoInput = React.createClass({
         onSave: React.PropTypes.func.isRequired
     },
 
-    getInitialState: function() {
-        return {
-            value: ''
-        };
-    },
-
     onKeyUp: function(evt) {
         if(evt.keyCode === 13) {
-            this.props.onSave(this.refs.input.getDOMNode().value);
+
+			var newItem = {
+				id: Utils.uuid(),
+				title: this.refs.input.getDOMNode().value,
+				completed: false
+			};
+
+            this.props.onSave(newItem);
+
+            // Clean up
             React.findDOMNode(this.refs.input).value = '';
             React.findDOMNode(this.refs.input).focus();
         }

@@ -1,8 +1,23 @@
 .TodoItem {
+	position: relative;
 	line-height: 30px;
 	padding-top: 2px;
 	padding-left: 10px;
 	background-color: white;
 	display: block;
 	margin-bottom: 10px;
+
+
+	.delete {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40px;
+		text-align: center;
+		height: 100%;
+		background: #ddd;
+		color: grey;
+		text-decoration: none;
+	}
 }

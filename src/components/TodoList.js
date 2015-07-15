@@ -11,14 +11,14 @@ var TodoList = React.createClass({
 
     var createItem = function(item) {
         return (
-            <TodoItem item={item} />
+            <TodoItem key={item.id} item={item} onDelete={this.props.onDelete} />
         );
     };
 
     return (
         <div className="TodoList">
             <ul>
-                {this.props.items.map(createItem)}
+                {this.props.items.map(createItem, this)}
             </ul>
         </div>
     );
