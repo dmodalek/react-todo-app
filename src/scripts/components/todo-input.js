@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require('react/addons');
-var Utils = require('../Utils');
+var Utils = require('../utils');
 
-require('styles/TodoInput.scss');
+require('../../styles/todo-input.scss');
 
 var TodoInput = React.createClass({
 

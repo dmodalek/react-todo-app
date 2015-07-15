@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require('react/addons');
-var TodoItem = require('./TodoItem');
+var TodoItem = require('./todo-item');
 
-require('styles/TodoList.scss');
+require('../../styles/todo-list.scss');
 
 var TodoList = React.createClass({
 

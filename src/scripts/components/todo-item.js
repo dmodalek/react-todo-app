@@ -2,7 +2,7 @@
 
 var React = require('react/addons');
 
-require('styles/TodoItem.scss');
+require('../../styles/todo-item.scss');
 
 var TodoItem = React.createClass({
 
@@ -10,9 +10,13 @@ var TodoItem = React.createClass({
 		this.props.onDelete(this.props.item.id);
 	},
 
+	onClick: function() {
+
+	},
+
     render: function() {
         return (
-            <li className="TodoItem">
+            <li className="TodoItem" onClick={this.onClick}>
                 {this.props.item.title}
                 <a className="delete" href="#" onClick={this.onDelete}>x</a>
             </li>

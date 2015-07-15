@@ -19,7 +19,7 @@ module.exports = {
   devtool: 'sourcemap',
   entry: [
       'webpack/hot/only-dev-server',
-      './src/components/main.js'
+      './src/scripts/app.js'
   ],
 
   stats: {
@@ -31,10 +31,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
     alias: {
       'styles': __dirname + '/src/styles',
-      'mixins': __dirname + '/src/mixins',
-      'components': __dirname + '/src/components/',
-      'stores': __dirname + '/src/stores/',
-      'actions': __dirname + '/src/actions/'
+      'mixins': __dirname + '/src/scripts/mixins',
+      'components': __dirname + '/src/scripts/components/',
+      'stores': __dirname + '/src/scripts/stores/',
+      'actions': __dirname + '/src/scripts/actions/'
     }
   },
   module: {

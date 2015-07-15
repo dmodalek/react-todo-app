@@ -4,9 +4,9 @@
 ## Done
 - React JS View Architecture
 - Local Storage for Saving the Todo's
+- Flux Framework
 
 ## Next
-- Flux Framework
 - Isomorphic
 
 ## Tools
