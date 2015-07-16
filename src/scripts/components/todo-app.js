@@ -4,6 +4,7 @@ var React = require('react');
 var AppActions = require('../actions/app-actions');
 var AppStore = require('../stores/app-store');
 
+var AppHeader = require('./app-header');
 var TodoInput = require('./todo-input');
 var TodoList = require('./todo-list');
 
@@ -46,7 +47,7 @@ var App = React.createClass({
 
 		return (
 			<div className="TodoApp">
-				<h1>Todo App</h1>
+				<AppHeader />
 				<TodoInput onSave={this._onSave} />
 				<TodoList items={this.state.items} onDelete={this._onDelete} />
 				<p>Total Items: {this._getTotalItems().qty}</p>
