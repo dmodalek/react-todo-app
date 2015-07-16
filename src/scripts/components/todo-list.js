@@ -7,60 +7,52 @@ var TodoInput = require('./todo-input');
 
 var AppActions = require('../actions/app-actions');
 var AppStore = require('../stores/app-store');
+var StoreMixin = require('../mixins/store-mixin');
 
 require('../../styles/todo-list.scss');
 
+// Private Functions
+
+function _getItems() {
+	return {
+		items: AppStore.getItems()
+	};
+};
+
+function _getTotalItems() {
+	return AppStore.getTotalItems();
+};
+
+function _onSave(item) {
+	AppActions.addItem(item);
+};
+
+function _onDelete(id) {
+	console.log('id', id);
+	AppActions.removeItem(id);
+};
+
 var TodoList = React.createClass({
+	mixins: [StoreMixin(_getItems)],
 
-	_getItems: function() {
-		return {
-			items: AppStore.getItems()
+	render: function () {
+
+		var createItem = function(item) {
+			return (
+				<TodoItem key={item.id} item={item} onDelete={_onDelete} />
+				);
 		};
-	},
 
-	_getTotalItems: function() {
-		return AppStore.getTotalItems();
-	},
-
-	_onSave: function(item) {
-		AppActions.addItem(item);
-	},
-
-	_onDelete: function(id) {
-		console.log('id', id);
-		AppActions.removeItem(id);
-	},
-
-	_onChange: function() {
-		this.setState(this._getItems());
-	},
-
-	getInitialState: function() {
-		return this._getItems();
-	},
-
-	componentWillMount: function() {
-		AppStore.addChangeListener(this._onChange);
-	},
-
-  render: function () {
-
-    var createItem = function(item) {
-        return (
-            <TodoItem key={item.id} item={item} onDelete={this._onDelete} />
-        );
-    };
-
-    return (
-        <div className="TodoList">
-			<TodoInput onSave={this._onSave} />
+		return (
+			<div className="TodoList">
+			<TodoInput onSave={_onSave} />
 			<ul>
-				{this.state.items.map(createItem, this)}
+			{this.state.items.map(createItem, this)}
 			</ul>
-			<p>Total Items: {this._getTotalItems().qty}</p>
-        </div>
-    );
-  }
+			<p>Total Items: {_getTotalItems().qty}</p>
+			</div>
+			);
+	}
 });
 
 module.exports = TodoList;

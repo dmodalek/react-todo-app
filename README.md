@@ -5,9 +5,9 @@
 - React JS View Architecture
 - Local Storage for Saving the Todo's
 - Flux Framework
+- React Router
 
 ## Next
-- React Router
 - Isomorphic
 
 ## Tools
