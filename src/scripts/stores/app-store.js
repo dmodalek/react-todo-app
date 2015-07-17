@@ -24,6 +24,17 @@ function _removeItem(id) {
 	});
 }
 
+function _getItem(id) {
+	var result = false;
+
+	_todos.forEach(function(item) {
+		if (id === item.id) {
+			result = item;
+		}
+	});
+	return result;
+}
+
 function _totalItems() {
 	var qty = 0;
 
@@ -51,6 +62,10 @@ var AppStore = assign(EventEmitter.prototype, {
 
 	getItems: function() {
 		return _todos;
+	},
+
+	getItem: function(id) {
+		return _getItem(id);
 	},
 
 	getTotalItems: function() {

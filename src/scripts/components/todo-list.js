@@ -17,20 +17,19 @@ function _getItems() {
 	return {
 		items: AppStore.getItems()
 	};
-};
+}
 
 function _getTotalItems() {
 	return AppStore.getTotalItems();
-};
+}
 
 function _onSave(item) {
 	AppActions.addItem(item);
-};
+}
 
 function _onDelete(id) {
-	console.log('id', id);
 	AppActions.removeItem(id);
-};
+}
 
 var TodoList = React.createClass({
 	mixins: [StoreMixin(_getItems)],

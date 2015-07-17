@@ -13,7 +13,7 @@ var Route = Router.Route;
 
 var routes = (
 	<Route name="app" path="/" handler={TodoApp}>
-		<Route name="detail" path="/detail/:item" handler={TodoDetail} />
+		<Route name="detail" path="/detail/:id" handler={TodoDetail} />
 		<DefaultRoute name="list" handler={TodoList} />
 	</Route>
 	);
