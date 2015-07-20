@@ -10,12 +10,12 @@
   "mainInput": "main",
   "mainOutput": "main",
   "scripts": {
-  	"clean": "rm -rf lib",
-  	   "watch-js": "./node_modules/.bin/babel src -d lib --experimental -w",
-  	   "dev-server": "node lib/server/webpack",
-  	   "server": "node lib/server/server",
+  	"clean": "rm -rf build",
+  	   "watch-js": "./node_modules/.bin/babel src -d build --experimental -w",
+  	   "dev-server": "node build/server/webpack",
+  	   "server": "node build/server/server",
   	   "start": "npm run watch-js & npm run dev-server & npm run server",
-  	   "build": "npm run clean && ./node_modules/.bin/babel src -d lib --experimental"
+  	   "build": "npm run clean && ./node_modules/.bin/babel src -d build --experimental"
   },
   "dependencies": {
     "react-router": "0.13.x",

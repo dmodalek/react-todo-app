@@ -7,7 +7,7 @@ import AppActions from "../actions/app-actions";
 import AppStore from "../stores/app-store";
 import StoreMixin from "../mixins/store-mixin";
 
-// require('../../assets/styles/todo-list.scss');
+require('../../assets/styles/todo-list.scss');
 
 // Private Functions
 
