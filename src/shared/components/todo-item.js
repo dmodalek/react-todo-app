@@ -3,7 +3,7 @@
 var React = require('react/addons');
 var Navigation = require('react-router').Navigation;
 
-require('../../styles/todo-item.scss');
+// require('../styles/todo-item.scss');
 
 var TodoItem = React.createClass({
 	mixins: [Navigation],

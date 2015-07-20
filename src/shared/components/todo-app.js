@@ -3,7 +3,7 @@
 var React = require('react');
 var RouteHandler = require('react-router').RouteHandler;
 
-require('../../styles/todo-app.scss');
+// require('../styles/todo-app.scss');
 
 var TodoApp = React.createClass({
 

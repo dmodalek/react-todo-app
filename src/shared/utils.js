@@ -22,6 +22,8 @@ var Utils = {
 	},
 
 	store: function (namespace, data) {
+		if(typeof localStorage !== "function") return [];
+
 		if (data) {
 			return localStorage.setItem(namespace, JSON.stringify(data));
 		}

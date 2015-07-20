@@ -6,7 +6,7 @@ var AppStore = require('../stores/app-store');
 
 var Link = Router.Link;
 
-require('../../styles/todo-item-detail.scss');
+// require('../styles/todo-item-detail.scss');
 
 // Private Functions
 

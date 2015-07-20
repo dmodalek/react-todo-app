@@ -3,7 +3,7 @@
 var React = require('react/addons');
 var Utils = require('../utils');
 
-require('../../styles/todo-input.scss');
+// require('../styles/todo-input.scss');
 
 var TodoInput = React.createClass({
 

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('ReactMvcApp', () => {
+describe('IsomorphicTodoApp', () => {
   let React = require('react/addons');
   let ReactMvcApp, component;
 

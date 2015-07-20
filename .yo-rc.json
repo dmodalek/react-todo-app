@@ -1,6 +1,6 @@
 {
   "generator-react-webpack": {
-    "app-name": "reactMvc",
+    "app-name": "Isomorphic Todo App",
     "architecture": "flux",
     "styles-language": "scss",
     "component-suffix": "js"

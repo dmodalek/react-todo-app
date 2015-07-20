@@ -1,15 +1,13 @@
-'use strict';
+import React from "react/addons";
+import TodoItem from "./todo-item";
 
-var React = require('react/addons');
+import TodoInput from "./todo-input";
 
-var TodoItem = require('./todo-item');
-var TodoInput = require('./todo-input');
+import AppActions from "../actions/app-actions";
+import AppStore from "../stores/app-store";
+import StoreMixin from "../mixins/store-mixin";
 
-var AppActions = require('../actions/app-actions');
-var AppStore = require('../stores/app-store');
-var StoreMixin = require('../mixins/store-mixin');
-
-require('../../styles/todo-list.scss');
+// require('../../assets/styles/todo-list.scss');
 
 // Private Functions
 
